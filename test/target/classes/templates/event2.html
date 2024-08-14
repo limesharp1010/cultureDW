@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축제 페이지</title>
+    <link rel="icon" type="image/x-icon" href="logo/logo.png">
+    <link rel="stylesheet" href="feststyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="imgslide.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo/logo.png" alt="Event 1" width="100px" height="100px"></div>
+        <nav class="nav">
+            <a href="top3.html">TOP3</a>
+            <a href="homepage.html" class="a1">행사정보</a>
+            <a href="board.html">게시판</a>
+            <a href="mypage.html">마이페이지</a>
+        </nav>
+        <div class="search-bar">
+            <a href="loginpage.html"><img src="login.png" alt="Event 1" width="50px" height="50px"></a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+           
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="event/2/evimg1.jpg" alt="슬라이드 이미지 1"></div> <!-- 슬라이드 이미지 경로 -->
+                    <div class="slide"><img src="event/2/evimg2.jpg" alt="슬라이드 이미지 2"></div> <!-- 슬라이드 이미지 경로 -->
+                    <div class="slide"><img src="event/2/evimg3.jfif" alt="슬라이드 이미지 3"></div> <!-- 슬라이드 이미지 경로 -->
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div class="icons">
+                <div><img src="icon/favorite.png" width="30px" height="30px" onclick="toggleHeart(this)"></div>
+                <div><img src="icon/share.png" width="30px" height="30px" onclick="share"></div>
+                <div><img src="icon/chat.png" width="30px" height="30px" onclick="chatting"></div>
+            </div>
+            <div>강릉을 품은 천년의 관아, 강릉대도호부</div>
+            <h2 class="h2">강릉 문화유산 야행</h2>
+            <div class="event-info">
+                <div class="event-dates">2024.08.15 ~ 2024.08.18</div>
+            </div>
+            <div class="description">
+                    강릉문화유산야행은 문화유산이 밀집된 거리를 중심으로 공연,체험,예술 등 다양한 활동을 제공함으로써 문화유산 활용도를 높이고,문화유산의 의미와 가치 향유를 통해 보존가치를 증진하기 위한 프로그램이다. 강릉시는 2016년부터 국가유산청 문화유산야행사업에 함께하고 있다. 강릉문화유산야행은 매년 강릉대도호부관아와 서부시장 일원을 중심으로 펼쳐지며 밤을 테마로한 8가지 프로그램(야경,야로,야사,야화,야설,야식,야숙,야시)이 준비되어있다. 각 프로그램은 볼거리,먹거리,즐길거리 등 특색있는 콘텐츠를 통하여 문화유산의 의미와 가치를 전달하고, 강릉시의 역사와 문화를 체험할 수 있는 기회를 제공한다.
+                    <div class="more-content">
+                        <br>
+                        [행사내용]<br>
+                        1. 메인프로그램<br>
+                        - 축제 개막식 및 축하공연 : 2024. 8. 13.(화) 19:30 <br>
+                        - 광복절 전야 음악회 : 2024. 8. 14.(수) 19:00<br>
+                        - 폐막공연 : 2024. 8.15.(목) 18:00<br>
+                        <br>
+                        2. 부대프로그램 : 놀이마당, 공연마당, 옥사공연, 전시프로그램<br>
+                        <br>
+                        3. 소비자 참여 프로그램 : 역사관 해설관람 / 스탬프랠리 / 독립군 전투체험 / 체험부스<br>
+                    </div>
+                    <button class="more" onclick="more(this)">더보기</button> 
+            
+            </div>
+            
+        </div>
+    </div>
+   
+</body>
+</html>

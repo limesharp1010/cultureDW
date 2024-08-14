@@ -1,0 +1,156 @@
+/* 기본 레이아웃 */
+body {
+    font-family: "Do Hyeon", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #201D36;
+    perspective: 1500px;
+    /* 3D 효과의 깊이 */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #C91111;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .nav {
+    display: flex;
+    gap: 20px;
+}
+
+header .nav a {
+    margin: 0 15px;
+    font-size: 35px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+header .nav>.a1 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+header .nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /* 전체 화면 높이 */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    /* 헤더 높이만큼 여백 추가 */
+}
+
+.event-list {
+    display: flex;
+    gap: 20px;
+    perspective: 1000px;
+}
+
+.event-item {
+    position: relative;
+    /* 포스터와 이벤트 디테일을 함께 움직이기 위해 필요 */
+    cursor: pointer;
+    transform-style: preserve-3d;
+    /* 3D 변환 적용을 위해 필요 */
+
+    /* 높이를 고정 */
+}
+
+.event-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.event-item:hover img {
+    transform: scale(1.5);
+}
+
+/* 가운데 포스터는 평면적으로, 양 옆 포스터는 기울어짐 */
+.event-item:nth-child(1) {
+    transform: rotateY(-20deg);
+    bottom : -10px;
+    padding : 50px;
+        width: 400px;
+            /* 폭을 고정 */
+            height: 600px;
+}
+
+.event-item:nth-child(2) {
+    transform: rotateY(0deg);
+    bottom : -20px;
+    /* 가운데 포스터 */
+            width: 400px;
+                /* 폭을 고정 */
+                height: 650px;
+}
+
+.event-item:nth-child(3) {
+    transform: rotateY(20deg);
+    bottom : -10px;
+    padding: 50px;
+            width: 400px;
+                /* 폭을 고정 */
+                height: 600px;
+}
+
+.event-details {
+    position: absolute;
+    bottom: -100px;
+    /* 포스터 아래 위치시키기 위해 음수 값 사용 */
+    left: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    /* 포스터의 폭에 맞게 조정 */
+    box-sizing: border-box;
+    /* padding과 border가 width에 포함되도록 설정 */
+    text-align: center;
+    /* 텍스트 중앙 정렬 */
+}
+
+.event-details2 {
+    position: absolute;
+        bottom: -200px;
+        /* 포스터 아래 위치시키기 위해 음수 값 사용 */
+        left: 10px;
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0px;
+        border-radius: 5px;
+        width: calc(100% - 20px);
+        /* 포스터의 폭에 맞게 조정 */
+        box-sizing: border-box;
+        /* padding과 border가 width에 포함되도록 설정 */
+        text-align: center;
+        /* 텍스트 중앙 정렬 */
+}
+
+.event-details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.event-details p {
+    margin: 5px 0;
+}
